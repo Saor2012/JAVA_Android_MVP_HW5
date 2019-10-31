@@ -26,7 +26,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Result: 1"
+        android:text="@string/zeroText"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button10"
         app:layout_constraintStart_toStartOf="parent"
