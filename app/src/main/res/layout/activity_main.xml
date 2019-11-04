@@ -6,7 +6,7 @@
         <data tools:ignore="MissingConstraints">
             <variable
                 name="presenter"
-                type="com.example.androidcalculator.base.view.Presenter" />
+                type="com.example.androidcalculator.base.view.ILink.Presenter" />
         </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 
 public class Presenter implements ILink.Presenter {
     private ILink.View view;
+    private Pair<String,String,String,String> pair;
     //private Calculator calculator = new Calculator();
     public static boolean isNumeric(String str) {
         return str.matches(TAG_CALC_REG1_STRING);

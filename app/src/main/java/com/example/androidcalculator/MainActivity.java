@@ -7,8 +7,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import timber.log.Timber;
+import com.example.androidcalculator.base.model.IFactory;
+import com.example.androidcalculator.base.model.Factory;
+import com.example.androidcalculator.base.view.ILink;
+import com.example.androidcalculator.base.view.Presenter;
 
 public class MainActivity extends AppCompatActivity {
+    private ILink.Presenter presenter;
     TextView text1, text2;
     //Button []buttons = {};
     Button btn, cancel, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btn11, btn12, btn13, btn14;
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             if (getIndex() == 2) {
                 state = true;
                 if (true) { //
+                    presenter.initFunction(System.out::println);
                     text1.setText(""); // result
                     state = false;
 
@@ -118,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             if (getIndex() == 2) {
                 state = true;
                 if (true) {
+
                     text1.setText(""); // result
                     state = false;
 
@@ -145,23 +152,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    protected String GetResultString(String str) {
-        return text1.getText().toString() + str;//"Result: " + (str.equals("") ? "0" : str) + " ";
-    }
-    protected void SplitString(String str, String []arr) {
-
-    }
+    protected String GetResultString(String str) { return text1.getText().toString() + str; }//"Result: " + (str.equals("") ? "0" : str) + " ";
+    protected void SplitString(String str, String []arr) {}
     public void setIndex(int index) {
         this.index = index;
     }
-    public int getIndex() {
-        return this.index;
-    }
+    public int getIndex() { return this.index; }
     public void setLastString(String str) {
         this.lastString = str;
     }
     public String getLastString() {
         return this.lastString;
+    }
+    public void presentorOper(String operation) {
+
     }
 
 }
