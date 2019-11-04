@@ -15,15 +15,16 @@ public class MainActivity extends AppCompatActivity {
     boolean state = false;
     protected int index = 0;
     protected String lastString = "";
+    //ActivityMainBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (BuildConfig.DEBUG)
+        /*if (BuildConfig.DEBUG)
             Timber.plant(new Timber.DebugTree());
-        else ;//Timber.plant(new ReleaseTree());
-        btn = (Button)findViewById(R.id.button17);
+        else ;//Timber.plant(new ReleaseTree());*/
+        btn = (Button)findViewById(R.id.button17); // =
         btn1 = (Button)findViewById(R.id.button1);
         btn2 = (Button)findViewById(R.id.button2);
         btn3 = (Button)findViewById(R.id.button3);
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             state = true;
             if (getIndex() == 2) {
                 state = true;
-                if (true) {
+                if (true) { //
                     text1.setText(""); // result
                     state = false;
 
